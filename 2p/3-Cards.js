@@ -104,6 +104,6 @@ class Cards {
 ( function useCard() {
     c1 = new Cards
     
-    console.log(c1.printC(29))
-    console.log(c1.PrintNum(2,3))
+    console.log(c1.printC(21))
+    console.log(c1.PrintNum(3,6))
 })()
