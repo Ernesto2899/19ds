@@ -110,7 +110,7 @@ class Matrix {
 
   (function useMatrix(){
 
-    ME = new Matrix(4,4)
+    ME = new Matrix(6,6)
 
     console.log(ME.int())
     console.log(ME.intRandom())
