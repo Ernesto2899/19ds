@@ -75,12 +75,12 @@ class List{
     let node4 = new node("node4");
     let node5 = new node("node5");
     let node6 = new node("node6");
-    let lisH = new List;
+    let lisME = new List;
 
-    lisH.Head(node5)
-    lisH.Head(node4)
-    lisH.Head(node3)
-    lisH.Head(node2)
-    lisH.Head(node1)
-    lisH.Tail(node6)   
+    lisME.Head(node5)
+    lisME.Head(node4)
+    lisME.Head(node3)
+    lisME.Head(node2)
+    lisME.Head(node1)
+    lisME.Tail(node6)   
 })()
