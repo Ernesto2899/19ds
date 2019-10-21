@@ -1,33 +1,40 @@
-class Fibonachi{
-    constructor(){
-        
-        this.cost = null
-        this.suc = []
-        this.tab = []
+class Fibonachi {
+    constructor(n) {
+        this.n = n;
     }
-    value(x){
-    
-        this.suc[this.cost] = x
-    
-        this.cost +=1
-   
-        this.tab[this.cost]= this.cost
-    
-    
-        return x < 2 ? x : this.value(x-1) + this.value(x-2);
-    
-    } 
-    costo(){
-       
-        return this.cost
-    } 
-    succes(){
-      
-        return this.suc
-    } 
-    table(){
-     
-        return this.tab
+    Value(n= this.n ) {
+        return n < 2 ? n : this.Value(n - 1) + this.Value(n - 2);
     }
-       
+    Cost( n = this.n ) {
+        let cont = 0;
+        function value(n){
+            if(n < 2){
+                cont++;
+            } else {
+                cont++;
+                return value(n-1) + value(n-2);
+            }
+        }
+        value(n);
+        return cont;
+    }
+    Sucesion() {
+        let sucesion = [];
+        for (let i = 1; i <= this.n; i++) {
+            sucesion.push(this.Value(i));
+        }
+        return sucesion;
+    }
+    Table() {
+        console.log("Number-Cost-Value ");
+        for(let i = 0; i <= this.n; i++){
+            console.log("X(" + i + ") - " + this.Cost(i) + " - " + this.Value(i));
+        }
+    }
 }
+
+let Fibo = new Fibonachi(8);
+console.log(Fibo.Value());
+console.log(Fibo.Sucesion()); 
+console.log(Fibo.Cost());
+console.log(Fibo.Table());
