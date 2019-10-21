@@ -24,9 +24,9 @@ class Vector {
 }
 
 ( function useVector () {
-  const x = [2, 3, 4, 5, 6, 7];
+  const x = [0, 1, 2, 3, 4, 5];
   
-  const z = [3, 2, 1, 5, 8, 1];
+  const z = [4, 3, 2, 7, 9, 3];
     
   const vector = new Vector(x);
   
